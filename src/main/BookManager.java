@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookManager {
-    private List<Book> books;
+    private List<IBook> books;
 
-    public List<Book> getBooks() {
+    public List<IBook> getBooks() {
         return books;
     }
 
@@ -14,6 +14,9 @@ public class BookManager {
         this.books = new ArrayList<>();
 
 
+    }
+    public void addBook(IBook book) {
+        books.add(book);
     }
 
 }
