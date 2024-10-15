@@ -1,0 +1,16 @@
+S.O.L.I.D Principles -
+
+Single Responsibility Principle (SRP):
+Every class should have only one reason to change. Each class should be responsible for one piece of functionality.
+
+Open/Closed Principle (OCP):
+Classes should be open for extension, but closed for modification. If we need new functionality, we should extend the existing classes without modifying the base ones.
+
+Liskov Substitution Principle (LSP):
+Subtypes should be substitutable for their base types. That is, derived classes should be able to replace base classes without altering the correctness of the program.
+
+Interface Segregation Principle (ISP):
+Clients should not be forced to implement interfaces they don’t use. Prefer smaller, specific interfaces over a large general-purpose interface.
+
+Dependency Inversion Principle (DIP):
+High-level modules should not depend on low-level modules; both should depend on abstractions (e.g., interfaces).

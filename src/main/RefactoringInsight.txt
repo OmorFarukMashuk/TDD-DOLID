@@ -1,0 +1,14 @@
+Single Responsibility Principle:
+BookManager manages books, MemberManager manages members, and Library serves as a facade.
+
+Open/Closed Principle:
+You can extend the functionality of Member by adding new member types (e.g., VIPMember), and the same goes for Book. You don’t need to modify the existing classes.
+
+Liskov Substitution Principle:
+Since both RegularMember and PremiumMember implement the IMember interface, they can replace any IMember without breaking the program.
+
+Interface Segregation Principle:
+Interfaces such as IBook and IMember are focused on a small set of specific responsibilities.
+
+Dependency Inversion Principle:
+Library depends on abstractions (IBook and IMember), not on concrete implementations (Book, RegularMember, PremiumMember).
