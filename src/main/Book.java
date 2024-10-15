@@ -1,7 +1,7 @@
 package main;
 
 
-public class Book {
+public class Book implements IBook{
 
     private String title;
     private String author;
@@ -15,33 +15,33 @@ public class Book {
         this.borrowedForExtendedPeriod = false;
 
     }
+    @Override
     public String getTitle() {
         return title;
     }
 
+    @Override
     public String getAuthor() {
         return author;
     }
 
-
+    @Override
     public boolean isAvailable(){
         return isAvailable;
 
     }
+    @Override
     public void setAvailable(boolean availability){
-        this.isAvailable = availability;
+        isAvailable = availability;
 
     }
+    @Override
     public boolean isBorrowedForExtendedPeriod() {
         return this.borrowedForExtendedPeriod;
-    }
+    }    
+    @Override
     public void setBorrowedForExtendedPeriod(boolean ext) {
-        this.borrowedForExtendedPeriod = true;
+        borrowedForExtendedPeriod = true;
     }
-    
-    
-
-
-    
     
 }
