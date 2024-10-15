@@ -10,7 +10,7 @@ public class PremiumMember extends Member {
     }
 
     @Override
-    public void returnBook(Book book) {
+    public void returnBook(IBook book) {
         borrowedBooks.remove(book);
     }
 
@@ -19,10 +19,9 @@ public class PremiumMember extends Member {
         return 5;
     }
 
-    public void extendBorrowPeriod(Book book) {
+    public void extendBorrowPeriod(IBook book) {
         book.setBorrowedForExtendedPeriod(true);
         
-        // throw new UnsupportedOperationException("Unimplemented method 'extendBorrowPeriod'");
     }
 
 }
