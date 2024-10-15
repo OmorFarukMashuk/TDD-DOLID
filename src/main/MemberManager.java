@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemberManager {
-    public List<Member> getMembers() {
+
+
+    private List<IMember> members;
+    public List<IMember> getMembers() {
         return members;
     }
-
-    private List<Member> members;
 
     public MemberManager(){
         this.members = new ArrayList<>();
 
+    }
+
+    public void addMember(IMember member) {
+        members.add(member);
+ 
     }
 
 }
