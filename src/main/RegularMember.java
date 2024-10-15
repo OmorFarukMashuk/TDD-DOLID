@@ -9,7 +9,7 @@ public class RegularMember extends Member{
 
     }
     @Override
-    public void returnBook(Book book) {
+    public void returnBook(IBook book) {
         borrowedBooks.remove(book);
         book.setAvailable(true);
 
@@ -20,26 +20,6 @@ public class RegularMember extends Member{
         return 2;
 
     }
-
-
-    // @Override
-    // public void borrowBook(Book book){
-    //     if(!book.isAvailable()){
-    //         throw new RuntimeException("Book is out of stock");
-
-    //     }
-    //     else if(borrowedBooks.size() == getBorrowLimit()){
-    //         throw new RuntimeException("Borrow limit exceeded");
-    //     }
-    //     else{
-    //         borrowedBooks.add(book);
-    //         book.setAvailable(false);
-
-    //     }
-
-
-    // }
-    
 
     
 }
