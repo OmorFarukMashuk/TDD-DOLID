@@ -14,24 +14,24 @@ public class Library {
 
 
 
-    public List<Book> getBooks() {
+    public List<IBook> getBooks() {
         return bookManager.getBooks();
 
     }
 
-    public List<Member> getMembers() {
-        return this.memberManager.getMembers();
+    public List<IMember> getMembers() {
+        return memberManager.getMembers();
 
     }
 
-    public void addBook(Book book1) {
+    public void addBook(IBook book1) {
 
-        bookManager.getBooks().add(book1);
+        bookManager.addBook(book1);
         
     }
 
-    public void addMember(Member member) {
-        memberManager.getMembers().add(member);
+    public void addMember(IMember member) {
+        memberManager.addMember(member);
 
     }
 
