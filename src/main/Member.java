@@ -2,12 +2,12 @@ package main;
 
 import java.util.List;
 
-public abstract class Member {
+public abstract class Member implements IMember{
 
     protected String name;
-    protected List<Book> borrowedBooks;
+    protected List<IBook> borrowedBooks;
 
-    public List<Book> getBorrowedBooks(){
+    public List<IBook> getBorrowedBooks(){
         return borrowedBooks;
     }
     
@@ -17,7 +17,7 @@ public abstract class Member {
 
 
 
-    public void borrowBook(Book book){
+    public void borrowBook(IBook book){
         if(!book.isAvailable()){
             throw new RuntimeException("Book is out of stock");
 
@@ -33,8 +33,6 @@ public abstract class Member {
 
 
     }
-    public abstract void returnBook(Book book);
-    public abstract int getBorrowLimit();
 
     
 }
