@@ -1,26 +1,42 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Library {
 
-    private BookManager bookManager;
-    private MemberManager memberManager;
+    private List<Book> books;
+    private List<Member> members;
 
-    public Library() {
-        this.bookManager = new BookManager();
-        this.memberManager = new MemberManager();
+    public Library(){
+        this.books = new ArrayList<>();
+        this.members = new ArrayList<>();
+
+
     }
 
-    public void addMember(RegularMember member) {
-        memberManager.addMember(member);
+    public List<Book> getBooks() {
+        return this.books;
+
     }
 
-    public void addBook(Book book) {
-        bookManager.addBook(book);
+    public List<Member> getMembers() {
+        return this.members;
+
     }
 
-    public void borrowBook(RegularMember member, Book book) {
-        member.borrowBook(book);
-    }    
+    public void addBook(Book book1) {
+        books.add(book1);
+        
+    }
+
+    public void addMember(Member member) {
+        members.add(member);
+
+    }
+
+
+
 
 
     
