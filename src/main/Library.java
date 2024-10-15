@@ -1,43 +1,39 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
 
-    private List<Book> books;
-    private List<Member> members;
+    private BookManager bookManager;
+    private MemberManager memberManager;
 
     public Library(){
-        this.books = new ArrayList<>();
-        this.members = new ArrayList<>();
-
-
+        this.bookManager = new BookManager();
+        this.memberManager = new MemberManager();
     }
 
+
+
     public List<Book> getBooks() {
-        return this.books;
+        return bookManager.getBooks();
 
     }
 
     public List<Member> getMembers() {
-        return this.members;
+        return this.memberManager.getMembers();
 
     }
 
     public void addBook(Book book1) {
-        books.add(book1);
+
+        bookManager.getBooks().add(book1);
         
     }
 
     public void addMember(Member member) {
-        members.add(member);
+        memberManager.getMembers().add(member);
 
     }
-
-
-
-
 
     
 }
